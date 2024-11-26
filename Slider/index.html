@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container for the entire carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Carousel images */
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 30px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+       
+       
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .prev, .next {
+                font-size: 24px;
+                padding: 8px;
+            }
+        }
+
+        .btndiv{
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btndiv button{
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <!-- Carousel Slides -->
+        <div class="carousel-slides">
+            <!-- <div class="carousel-slide">
+                <img src="img/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/slide3.webp" alt="Slide 3">
+            </div> -->
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <div class="btndiv">
+        <a href="./imagemanager.html"><button>Add Image</button></a>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

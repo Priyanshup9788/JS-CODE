@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="imgstyles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Course List</h2>
+    
+    <!-- Input Form -->
+    <div class="form-container">
+      <input type="file" name="img" id="img">
+      <button onclick="addRow()">Add</button>
+      <button onclick="updateRow()" id="updateBtn">Update</button>
+    </div>
+
+    <!-- Table -->
+    <table id="courseTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>image</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="recodr-list">
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="imgscript.js"></script>
+</body>
+</html>
