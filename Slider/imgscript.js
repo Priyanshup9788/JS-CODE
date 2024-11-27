@@ -35,7 +35,7 @@ function getrecords()
 }
 
 //addrecord
-function addRow()
+async function addRow()
 {
     let name=document.getElementById("img").value;
     name=name.replace(/^.*[\\\/]/, '');

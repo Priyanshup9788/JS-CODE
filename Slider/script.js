@@ -36,7 +36,7 @@ function nextslide() {
 }
 
 //nextbtn
-function prevbtn() {
+function prevslide() {
     cuurentslide = (cuurentslide - 1 + slidecounter) % slidecounter;
     displayslider();
 }
@@ -57,4 +57,15 @@ function stop() {
     clearInterval(interval);
 }
 
+document.querySelector(".next").addEventListener("click",()=>{
+    nextslide();
+    stop();
+    start();
+});
+
+document.querySelector(".prev").addEventListener("click",()=>{
+    prevslide();
+    stop();
+    start();
+});
 start();
