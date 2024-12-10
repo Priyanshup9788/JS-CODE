@@ -32,7 +32,7 @@ class header{
 
     render()
     {
-        let count=JSON.parse(localStorage.getItem("cart").length)
+        let count=JSON.parse(localStorage.getItem("cart")).length
         document.getElementById("header").innerHTML=`
             <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <div class="container-fluid">
@@ -147,19 +147,25 @@ class Cart{
     }
 
     displayCartItems() {
-        const cartItemsContainer = document.getElementById("cart-items");
+        const cartItemsContainer = document.getElementById("cart-section");
     
         if (this.items.length === 0) {
-          cartItemsContainer.innerHTML = `<p class="text-centerx"> Your cart is empty</p>`;
+          cartItemsContainer.innerHTML = `<p class="text-center"> Your cart is empty</p>`;
         } else {
           cartItemsContainer.innerHTML = this.items
             .map(
               (item) => `
-            <div class="cart-item">
-            <h4>${item.name}</h4>
-            <img src="${item.img}" alt="${item.desc}" width="50">
-            <button onclick="cart.removeFromCart('${item.name}')">Remove</button>
-            </div>
+
+                <div class="cart-item my-3 ">
+                    <div class="d-flex flex-wrap flex-row justify-content-center">
+                        <img src="img/${item.img}" alt="desc" height="120" width="120" >
+                        <div class="cart-details  mt-2">
+                            <h4>${item.name}</h4>
+                            <h6>RS.${item.price}</h6>
+                            <button type="button" onclick="cart.removeFromCart('${item.name}')" class="btn btn-secondary">Remove</button>
+                        </div>
+                    </div>
+                </div>
             `
             )
             .join("");

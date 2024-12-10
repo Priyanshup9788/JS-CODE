@@ -4,3 +4,12 @@
     left: 0;
 }
 
+.cart-iteams{
+    width: 70%;
+    height: 70vh;
+    background-color: #424242;
+}
+
+.cart-item{
+    margin: 0px auto;
+}
