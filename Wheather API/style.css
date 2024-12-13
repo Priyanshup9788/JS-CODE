@@ -1,0 +1,113 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #3a8cfc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* Main Weather Section */
+.current-weather {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#city-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.weather-info {
+    font-size: 1.2rem;
+}
+
+.weather-info img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+/* 7-Day Forecast */
+.forecast {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.forecast-days {
+    display: flex;
+    justify-content: space-around;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+}
+
+.day img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #3a8cfc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}

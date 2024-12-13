@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">WeatherApp</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Forecast</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="city-search" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="current-weather" id="current-weather">
+            
+        </section>
+
+        <section class="forecast" id="forecast">
+            <h2>7-Day Forecast</h2>
+            <div class="forecast-days">
+                <div class="day">
+                    <p>Mon</p>
+                    <img src="cloudy-icon.png" alt="cloudy">
+                    <p>22°C</p>
+                </div>
+                <!-- Repeat for other days -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WeatherApp</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
