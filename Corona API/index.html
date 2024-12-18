@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Report Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Search Bar and Button -->
+        <div class="search-container">
+            <input type="text" id="search" class="search-input" placeholder="Search for data...">
+            <button id="btn_srch" class="search-button">Search</button>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <h1>Corona Report Dashboard</h1>
+            <h1 id="country">Country Name</h1>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2>Total Cases</h2>
+                <p id="total-cases" class="number">1,200,000</p>
+            </div>
+            <div class="stat-card">
+                <h2>Total Deaths</h2>
+                <p id="deaths" class="number">30,000</p>
+            </div>
+            <div class="stat-card">
+                <h2>Tests</h2>
+                <p id="recovered" class="number">1,150,000</p>
+            </div>
+            <div class="stat-card">
+                <h2>Active Cases</h2>
+                <p id="active-cases" class="number">20,000</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

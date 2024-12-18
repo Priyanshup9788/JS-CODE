@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Search Bar and Button Styles */
+.search-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center search bar and button */
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+.search-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #1ABC9C; /* Teal border */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #27AE60; /* Light green when focused */
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1ABC9C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #16A085; /* Darker teal on hover */
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 36px;
+    color: #1D3C58; /* Deep Blue */
+}
+
+header p {
+    color: #7F8C8D;
+    font-size: 16px;
+}
+
+/* Stats Section Styles */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.5s forwards;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    gap: 20px; /* Add spacing between cards */
+}
+
+.stat-card {
+    background-color: #1ABC9C; /* Teal */
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.stat-card h2 {
+    font-size: 24px;
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #BDC3C7;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+footer p {
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card h2 {
+    transition: color 0.3s ease;
+}
+
+.stat-card:hover h2 {
+    color: #000; /* Black */
+}
+
+.number {
+    transition: color 0.3s ease;
+}
+
+.stat-card:hover .number {
+    color: #000; /* Black */
+}
+
+/* Responsive Styles */
+
+/* For Tablets */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .stats-container {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .stat-card {
+        width: 80%; /* Make the cards take up more width on smaller screens */
+        margin-bottom: 20px; /* Add space between cards */
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    /* Search input and button on tablets */
+    .search-input {
+        width: 70%;
+    }
+
+    .search-button {
+        width: auto;
+    }
+}
+
+/* For Mobile Devices */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    .stats-container {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .stat-card {
+        width: 90%; /* Make the cards even larger on mobile */
+        margin-bottom: 20px; /* Add space between cards */
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    /* Search input and button on mobile */
+    .search-input {
+        width: 80%;
+    }
+
+    .search-button {
+        width: auto;
+    }
+}
