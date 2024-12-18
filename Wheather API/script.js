@@ -1,4 +1,4 @@
-let forecast = document.getElementById("forecast");
+
 let curr_weather = document.getElementById("current-weather");
 let srch_btn = document.getElementById("search-btn");
 
@@ -24,6 +24,8 @@ xhr.onload = function () {
 
     }
     else {
+        alert("invalid city name");
+        document.getElementById("city-search").value='';
         console.log(xhr.status);
     }
 }
@@ -57,6 +59,8 @@ function renderweather() {
 
         }
         else {
+            alert("invalid city name");
+            document.getElementById("city-search").value='';
             console.log(xhr.status);
         }
     }
