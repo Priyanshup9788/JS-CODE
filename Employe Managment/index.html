@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Employee</h2>
+        <form id="emp-form" >
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+
+            <!-- Department -->
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="default" selected>Select Department</option>
+                    <option value="hr">Human Resources</option>
+                    <option value="it">IT</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="sales">Sales</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="finance">Finance</option>
+                </select>
+            </div>
+
+            <!-- Salary -->
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary" name="salary" placeholder="Enter Salary" required>
+            </div>
+
+            <!-- Performance -->
+            <div class="form-group">
+                <label for="performance">Performance Review:</label>
+                <input type="number" id="performance" name="performance" placeholder="Enter performance (0-10)" required >
+            </div>
+
+            <!-- Projects -->
+            <div class="form-group">
+                <label for="projects">Projects:</label>
+                <textarea id="projects" name="projects" rows="4" placeholder="List of projects this employee has worked on" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Add Employee</button>
+            </div>
+        </form>
+        <div class="form-group">
+            <a href="index2.html"><button id="view-record">View Employee</button></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Employee Records</h2>
+
+        <!-- Search and Add Employee Buttons -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for names">
+            <button onclick="">Search Employee</button>
+        </div>
+
+        <!-- Employee Table -->
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Performance</th>
+                    <th>Projects</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="empdata">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
