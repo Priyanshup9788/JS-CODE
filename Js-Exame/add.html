@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Task - Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Add New Task</h1>
+            <a href="index.html" class="btn-back">← Back to Task List</a>
+        </header>
+        
+        <div class="main-content">
+            <div class="form-section">
+                <form id="add-task" class="add-task-form">
+                    <div class="form-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" name="task-title" placeholder="Enter task title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="task-description">Task Description</label>
+                        <textarea id="task-description" name="task-description" placeholder="Enter task description" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="datetime-local" id="due-date" name="due-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="shopping">Shopping</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn-submit">Add Task</button>
+                    <button type="submit" id="update-btn" class="btn-submit" style="display: none;">Update Task</button>
+                </form>
+            </div>
+
+            <!-- Task Records Table Section -->
+            <div class="table-section">
+                <h2>Task Records</h2>
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatbl">
+                        <!-- Sample task data, this will be dynamically generated later -->
+                        <tr>
+                            <td>Finish Report</td>
+                            <td>Complete the quarterly financial report by EOD.</td>
+                            <td>2024-12-25 12:00</td>
+                            <td>High</td>
+                            <td>Work</td>
+                        </tr>
+                        <tr>
+                            <td>Call Client</td>
+                            <td>Call the client to discuss the project progress.</td>
+                            <td>2024-12-25 14:00</td>
+                            <td>Medium</td>
+                            <td>Work</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

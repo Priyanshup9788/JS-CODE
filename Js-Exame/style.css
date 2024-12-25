@@ -1,0 +1,382 @@
+/* General Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container and Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #3e64ff;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.btn-add-task {
+    padding: 0.5rem 1rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-add-task:hover {
+    background-color: #ff4500;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex: 1;
+    margin-top: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar form {
+    margin-top: 1rem;
+}
+
+.sidebar label {
+    font-size: 0.9rem;
+}
+
+.sidebar select {
+    padding: 0.3rem;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+
+/* Task View */
+.task-view {
+    flex: 1;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.priority {
+    padding: 0.2rem 0.5rem;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.high-priority .priority {
+    background-color: #ff6347;
+    color: white;
+}
+
+.medium-priority .priority {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.low-priority .priority {
+    background-color: #32cd32;
+    color: white;
+}
+
+.task-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-mark-completed {
+    padding: 0.5rem 1rem;
+    background-color: #3e64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-mark-completed:hover {
+    background-color: #2d4bc7;
+}
+
+
+
+
+
+
+
+
+
+/* add page */
+/* Additions to the existing styles */
+
+/* Add Task Page Layout */
+/* .add-task-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    background-color: #3e64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d4bc7;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-back:hover {
+    background-color: #ff4500;
+} */
+
+
+/* General Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container and Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #3e64ff;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-back:hover {
+    background-color: #ff4500;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    margin-top: 1rem;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.add-task-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    background-color: #3e64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d4bc7;
+}
+
+/* Task Table Section */
+.table-section {
+    flex: 1.5;
+    padding: 2rem;
+    margin-left: 1rem;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.task-table th, .task-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.task-table th {
+    background-color: #3e64ff;
+    color: white;
+    font-weight: bold;
+}
+
+.task-table td {
+    background-color: #fff;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
