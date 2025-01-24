@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f3f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .forgot-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+        .forgot-container h1 {
+            font-size: 24px;
+            color: #4b3832;
+            margin-bottom: 15px;
+        }
+        .forgot-container p {
+            font-size: 14px;
+            color: #6f4e37;
+            margin-bottom: 20px;
+        }
+        .forgot-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .forgot-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .forgot-container button {
+            padding: 10px;
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .forgot-container button:hover {
+            background-color: #5a3d2b;
+        }
+        .forgot-container .back {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .forgot-container .back a {
+            color: #6f4e37;
+            text-decoration: none;
+        }
+        .forgot-container .back a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-container">
+        <h1>Forgot Password</h1>
+        <p>Enter your email address below</p>
+        <form action="" method="POST">
+            <input id="email-id" type="email" name="email" placeholder="Email Address" required>
+            <input id="pass" style="display: none;" type="password" name="password" placeholder="New Password" required>
+            
+            <button id="reset-btn" type="submit">Reset Password</button>
+            <button id="reset-btn2" style="display: none;" type="submit">Reset Password</button>
+
+        </form>
+        <div class="back">
+            Remembered your password? <a href="login.html">Log In</a>
+        </div>
+    </div>
+    <script src="asset/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f3f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+        .login-container h1 {
+            font-size: 24px;
+            color: #4b3832;
+            margin-bottom: 20px;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .login-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-container button {
+            padding: 10px;
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-container button:hover {
+            background-color: #5a3d2b;
+        }
+        .login-container .signup {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .login-container .signup a {
+            color: #6f4e37;
+            text-decoration: none;
+        }
+        .login-container .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome Back!</h1>
+        <form action="" method="POST">
+            <input id="email-id" type="email" name="email" placeholder="Email Address" required>
+            <input id="pass" type="password" name="password" placeholder="Password" required>
+            <button id="log-in" type="submit">Log In</button>
+        </form>
+        <div class="signup">
+            Don't have an account? <a href="/sign-up.html">Sign Up</a>
+        </div>
+        <div class="signup">
+            forget password? <a href="/forget.html">Sign Up</a>
+        </div>
+    </div>
+    <script src="asset/js/script.js"></script>
+</body>
+</html>
